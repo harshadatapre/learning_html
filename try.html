@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hollow Text on Image</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Full-screen background image */
+  .background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/sunflower.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Hollow text with white outline */
+  .hollow-text {
+    font-size: 100px;
+    font-weight: bold;
+    color: transparent;             /* Makes the inside hollow */
+    -webkit-text-stroke: 3px white; /* Outline thickness and color */
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(0,0,0,0.2); /* optional subtle shadow */
+  }
+
+  /* Responsive text for smaller screens */
+  @media (max-width: 768px) {
+    .hollow-text {
+      font-size: 60px;
+      -webkit-text-stroke: 2px white;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="background">
+    <h1 class="hollow-text">Hello World</h1>
+  </div>
+</body>
+</html>
